@@ -1,13 +1,22 @@
-void main (){
-    Toyota carina = Toyota();
-    carina.engine_type = "DIESEL";
-    carina.display();
-} 
- class Cars{
-    String engine_type;
-    void display(){
-        print("Name: $engine_type");
-    }
+class Country {
+  final int region;
+  final String center;
+  Country(this.region, this.center);
+
+  void main() {
+ 
+  }
 }
- class Toyota extends Cars;
+  
+
+class Kyrgyzstan extends Country {
+  final bool isinASIA;
+ Kyrgyzstan (super.region, super.center, this.isinASIA);
 }
+
+void main() {
+  var country = Kyrgyzstan(7, 'Bishkek', true);
+  print(country.region);
+  print(country.center);
+}
+
